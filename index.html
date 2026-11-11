@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Sri Lanka Tours | Private Tours, Safaris &amp; Airport Transfers – Concept Demo</title>
+  <meta name="description" content="Visit Sri Lanka Tours – customised private tours, hotels, transport, airport transfers and safaris across Sri Lanka. Your Journey. Your Way.">
+  <!-- Demo only: stops Google from listing this page. REMOVE when the real site goes live. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ocean: #0b6e74;
+      --ocean-deep: #08464b;
+      --lagoon: #19b4b0;
+      --sand: #f6ead7;
+      --sand-2: #fbf6ee;
+      --sunset: #f06a3c;
+      --sunset-dark: #d4552b;
+      --ink: #12302f;
+      --muted: #5e7473;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--sand-2); }
+    h1, h2, h3, h4, .serif { font-family: 'DM Serif Display', serif; font-weight: 400; }
+    .script { font-family: 'Kaushan Script', cursive; }
+    section { padding: 100px 0; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--sunset); font-weight: 700; letter-spacing: 3px; font-size: .78rem; text-transform: uppercase; }
+    .title { font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1.05; }
+    .title em { color: var(--ocean); }
+
+    .demo-ribbon { background: var(--ink); color: #dff3f2; text-align: center; font-size: .78rem; padding: 6px; }
+
+    /* Nav */
+    .navbar { background: rgba(251,246,238,.92); backdrop-filter: blur(8px); box-shadow: 0 2px 18px rgba(0,0,0,.05); }
+    .navbar-brand { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display'; font-size: 1.3rem; color: var(--ink) !important; }
+    .navbar-brand img { width: 46px; height: 46px; border-radius: 50%; }
+    .navbar .nav-link { color: var(--ink) !important; font-weight: 500; }
+    .navbar .nav-link:hover { color: var(--ocean) !important; }
+
+    .btn-sun { background: var(--sunset); color: #fff; border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-sun:hover { background: var(--sunset-dark); color: #fff; }
+    .btn-ocean { background: var(--ocean); color: #fff; border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-ocean:hover { background: var(--ocean-deep); color: #fff; }
+    .btn-white { background: #fff; color: var(--ink); border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-white:hover { background: var(--sand); }
+
+    /* Hero */
+    .hero { min-height: 92vh; display: flex; align-items: center; color: #fff; position: relative; overflow: hidden;
+      background:
+        radial-gradient(ellipse at 15% 110%, rgba(246,234,215,.95) 0 18%, transparent 19%),
+        radial-gradient(circle at 85% 15%, rgba(255,200,120,.55), transparent 30%),
+        linear-gradient(160deg, #0f8f92 0%, #0b6e74 45%, #08464b 100%); }
+    .hero .wave { position: absolute; left: 0; right: 0; bottom: -2px; width: 100%; }
+    .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; }
+    .hero .script { font-size: clamp(2.4rem, 6vw, 4.2rem); color: #ffd59e; display: block; margin-bottom: -6px; }
+    .hero .lead { color: #d9f1ef; }
+    .hero-logo { width: clamp(220px, 30vw, 360px); border-radius: 50%; border: 8px solid rgba(255,255,255,.25); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+    .hero-badges span { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 50px; padding: 8px 16px; margin: 0 8px 8px 0; font-size: .9rem; }
+    .ig-proof { display: inline-flex; align-items: center; gap: 12px; background: #fff; color: var(--ink); border-radius: 50px; padding: 8px 18px 8px 8px; }
+    .ig-proof .ig { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #fff; display: flex; align-items: center; justify-content: center; }
+
+    /* Services */
+    .svc { background: #fff; border-radius: 22px; padding: 30px; height: 100%; box-shadow: 0 10px 30px rgba(11,110,116,.06); transition: .3s; }
+    .svc:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(11,110,116,.14); }
+    .svc .ico { width: 58px; height: 58px; border-radius: 16px; background: #e1f4f3; color: var(--ocean); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px; }
+
+    /* Destinations */
+    .dest { position: relative; border-radius: 24px; overflow: hidden; min-height: 300px; display: flex; align-items: flex-end; padding: 24px; color: #fff; transition: .3s; }
+    .dest:hover { transform: scale(.985); }
+    .dest::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.55), transparent 60%); }
+    .dest > * { position: relative; z-index: 1; }
+    .dest .bigi { position: absolute; top: 22px; right: 22px; font-size: 2.6rem; opacity: .5; z-index: 1; }
+    .dest h4 { margin: 0; font-size: 1.8rem; }
+    .d1 { background: linear-gradient(160deg, #c98a4b, #6d4a2a); } .d2 { background: linear-gradient(160deg, #e3b04b, #9a5b1e); }
+    .d3 { background: linear-gradient(160deg, #4f9a5a, #1f5530); } .d4 { background: linear-gradient(160deg, #8aa05a, #45562a); }
+    .d5 { background: linear-gradient(160deg, #19b4b0, #0b6e74); } .d6 { background: linear-gradient(160deg, #6ab0d6, #2e6b8f); }
+
+    /* Planner */
+    .planner { background: var(--ocean-deep); color: #fff; }
+    .planner .muted { color: #a9cfcd; }
+    .planner .title em { color: #ffd59e; }
+    .plan-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 34px; }
+    .plan-card label.lbl { font-size: .8rem; letter-spacing: 2px; text-transform: uppercase; color: #a9cfcd; margin-bottom: 8px; display: block; }
+    .interest { display: inline-block; cursor: pointer; border: 1px solid rgba(255,255,255,.25); border-radius: 50px; padding: 9px 18px; margin: 0 8px 10px 0; user-select: none; transition: .2s; }
+    .interest.on { background: #ffd59e; color: var(--ink); border-color: #ffd59e; font-weight: 700; }
+    .plan-card .form-control, .plan-card .form-select { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; border-radius: 12px; padding: 12px; }
+    .plan-card .form-select option { color: #000; }
+    .plan-card .form-control:focus, .plan-card .form-select:focus { box-shadow: none; border-color: #ffd59e; background: rgba(255,255,255,.12); color: #fff; }
+    input[type=range] { accent-color: #ffd59e; }
+    .daycount { font-family: 'DM Serif Display'; font-size: 2.4rem; color: #ffd59e; line-height: 1; }
+    .itin { background: #fff; color: var(--ink); border-radius: 24px; padding: 30px; min-height: 100%; }
+    .itin .day { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px dashed #d9e7e6; }
+    .itin .day b.num { flex-shrink: 0; width: 64px; color: var(--sunset); font-family: 'DM Serif Display'; font-size: 1.1rem; font-weight: 400; }
+    .itin .empty { color: var(--muted); text-align: center; padding: 60px 10px; }
+    .itin .empty i { font-size: 3rem; color: #cfe3e2; display: block; margin-bottom: 10px; }
+
+    /* Why */
+    .why-item { display: flex; gap: 16px; margin-bottom: 26px; }
+    .why-item i { font-size: 1.6rem; color: var(--sunset); }
+    .why-photo { border-radius: 30px; min-height: 420px; background: linear-gradient(160deg, #19b4b0, #0b6e74 60%, #08464b); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.8); flex-direction: column; }
+    .why-photo i { font-size: 4rem; }
+
+    /* Instagram strip */
+    .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .ig-grid div { aspect-ratio: 1/1; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; }
+    .ig-grid div:nth-child(1){background:#c98a4b}.ig-grid div:nth-child(2){background:#19b4b0}.ig-grid div:nth-child(3){background:#4f9a5a}
+    .ig-grid div:nth-child(4){background:#e3b04b}.ig-grid div:nth-child(5){background:#2e6b8f}.ig-grid div:nth-child(6){background:#8aa05a}
+    @media (max-width: 767px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* FAQ */
+    .accordion-item { border: 0; border-radius: 16px !important; margin-bottom: 12px; overflow: hidden; }
+    .accordion-button { font-weight: 700; }
+    .accordion-button:not(.collapsed) { background: #e1f4f3; color: var(--ocean); box-shadow: none; }
+    .accordion-button:focus { box-shadow: none; }
+
+    /* Contact */
+    .contact-wrap { background: var(--ocean); color: #fff; border-radius: 30px; overflow: hidden; }
+    .contact-wrap a { color: #fff; text-decoration: none; }
+    .c-row { display: flex; gap: 14px; margin-bottom: 18px; }
+    .c-row i { color: #ffd59e; font-size: 1.3rem; }
+    .contact-wrap iframe { width: 100%; height: 100%; min-height: 380px; border: 0; }
+
+    footer { padding: 34px 0; color: var(--muted); font-size: .9rem; }
+
+    .wa-fab { position: fixed; right: 22px; bottom: 22px; background: #25d366; color: #fff; border-radius: 50px; padding: 14px 20px; font-weight: 700; text-decoration: none; z-index: 999; box-shadow: 0 10px 26px rgba(0,0,0,.25); }
+    .wa-fab:hover { color: #fff; transform: translateY(-2px); }
+
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO NOTICE: remove after the owner approves -->
+  <div class="demo-ribbon">Concept demo prepared for Visit Sri Lanka Tours · photos &amp; tour details are placeholders</div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><img src="logo.png" alt="Visit Sri Lanka Tours logo"> Visit Sri Lanka Tours</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planner">Plan a Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-sun btn-sm px-4" href="#planner">Get a Free Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="container position-relative" style="z-index:2">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 reveal">
+          <span class="script">Ayubowan!</span>
+          <h1>Discover Sri Lanka<br>your way.</h1>
+          <p class="lead my-4" style="max-width:540px">Customised private tours with professional chauffeurs, handpicked hotels, safaris and airport transfers, all planned around your dates and interests.</p>
+          <div class="hero-badges mb-4">
+            <span><i class="bi bi-car-front"></i>Private tours</span>
+            <span><i class="bi bi-airplane"></i>Airport transfers</span>
+            <span><i class="bi bi-clock"></i>Open 24 hours</span>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#planner" class="btn btn-sun">Plan My Trip</a>
+            <a href="https://wa.me/94769454241?text=Hi%20Visit%20Sri%20Lanka%20Tours!%20I'd%20like%20to%20plan%20a%20trip." target="_blank" class="btn btn-white"><i class="bi bi-whatsapp me-2 text-success"></i>WhatsApp Us</a>
+          </div>
+          <div class="ig-proof">
+            <div class="ig"><i class="bi bi-instagram"></i></div>
+            <div><b>120K+</b> travellers follow us on Instagram</div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center reveal">
+          <img src="logo.png" alt="Visit Sri Lanka" class="hero-logo">
+          <p class="script mt-4 mb-0" style="font-size:1.8rem;color:#ffd59e">Your Journey. Your Way.</p>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" height="90"><path fill="#fbf6ee" d="M0,64 C240,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z"/></svg>
+  </header>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">What we offer</div>
+        <h2 class="title mt-2">Everything for your <em>perfect trip</em></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-map"></i></div><h4>Customised Private Tours</h4><p class="muted mb-0">Your own vehicle and itinerary, built around what you love.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-building"></i></div><h4>Hotels &amp; Villas</h4><p class="muted mb-0">Handpicked stays from boutique villas to beach resorts.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-airplane-engines"></i></div><h4>Airport Transfers</h4><p class="muted mb-0">Comfortable pickup and drop-off at any hour, day or night.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-binoculars"></i></div><h4>Safaris &amp; Adventures</h4><p class="muted mb-0">Leopards, elephants, whales, hikes and more.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-person-badge"></i></div><h4>Professional Chauffeurs</h4><p class="muted mb-0">Friendly, experienced drivers who know the island inside out.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-geo-alt"></i></div><h4>Islandwide Assistance</h4><p class="muted mb-0">Support wherever you are in Sri Lanka, 24 hours a day.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTINATIONS ===== -->
+  <section id="destinations" class="pt-0">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5 reveal">
+        <div><div class="eyebrow">Where to go</div><h2 class="title mt-2">Popular <em>destinations</em></h2></div>
+        <a href="#planner" class="btn btn-ocean">Build a trip with these</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d1"><i class="bi bi-image bigi"></i><div><small>Ancient wonder</small><h4>Sigiriya</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d2"><i class="bi bi-image bigi"></i><div><small>Culture &amp; temples</small><h4>Kandy</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d3"><i class="bi bi-image bigi"></i><div><small>Hill country &amp; tea</small><h4>Ella</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d4"><i class="bi bi-image bigi"></i><div><small>Wildlife safari</small><h4>Yala</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d5"><i class="bi bi-image bigi"></i><div><small>Beaches &amp; whales</small><h4>Mirissa</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d6"><i class="bi bi-image bigi"></i><div><small>Colonial charm</small><h4>Galle Fort</h4></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRIP PLANNER ===== -->
+  <section class="planner" id="planner">
+    <div class="container">
+      <div class="mb-5 reveal">
+        <div class="eyebrow" style="color:#ffd59e">Free trip planner</div>
+        <h2 class="title mt-2">Tell us your dates &amp; interests, <em>we'll do the rest</em></h2>
+        <p class="muted">Pick your interests and trip length to see a sample route, then send it to us for a free personalised quote.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6 reveal">
+          <div class="plan-card">
+            <label class="lbl">I'm interested in</label>
+            <div id="interests" class="mb-4">
+              <span class="interest on" data-i="culture">🛕 Culture</span>
+              <span class="interest on" data-i="wildlife">🐘 Wildlife</span>
+              <span class="interest" data-i="hills">🌿 Hill Country</span>
+              <span class="interest on" data-i="beach">🏖️ Beaches</span>
+              <span class="interest" data-i="food">🍛 Food</span>
+            </div>
+            <label class="lbl">Trip length</label>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <input type="range" id="days" min="3" max="14" value="7" class="form-range flex-grow-1">
+              <div class="daycount"><span id="dayVal">7</span><small style="font-size:1rem"> days</small></div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6"><label class="lbl">Arrival date</label><input type="date" id="arrive" class="form-control"></div>
+              <div class="col-sm-6"><label class="lbl">Travellers</label>
+                <select id="people" class="form-select"><option>1</option><option selected>2</option><option>3–4</option><option>5–8</option><option>9+</option></select>
+              </div>
+              <div class="col-12"><label class="lbl">Your name</label><input id="tname" class="form-control" placeholder="Name"></div>
+            </div>
+            <button class="btn btn-sun w-100 mt-4" onclick="sendTrip()"><i class="bi bi-whatsapp me-2"></i>Send for a Free Quote</button>
+            <small id="tripMsg" class="d-block mt-2" style="color:#ffd59e"></small>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="itin" id="itinerary"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section>
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 reveal"><div class="why-photo"><i class="bi bi-camera"></i><p class="mt-3 mb-0">Tour / driver / happy guests photo</p></div></div>
+        <div class="col-lg-6 reveal">
+          <div class="eyebrow">Why travel with us</div>
+          <h2 class="title mt-2 mb-4">Local experts, <em>personal service</em></h2>
+          <div class="why-item"><i class="bi bi-heart"></i><div><h5 class="mb-1">Made for you</h5><p class="muted mb-0">No fixed packages. Every trip is planned around your dates and interests.</p></div></div>
+          <div class="why-item"><i class="bi bi-shield-check"></i><div><h5 class="mb-1">Safe &amp; reliable</h5><p class="muted mb-0">Professional chauffeurs and comfortable, well-maintained vehicles.</p></div></div>
+          <div class="why-item"><i class="bi bi-clock-history"></i><div><h5 class="mb-1">24-hour support</h5><p class="muted mb-0">We're always one WhatsApp message away during your trip.</p></div></div>
+          <div class="why-item"><i class="bi bi-instagram"></i><div><h5 class="mb-1">Trusted by 120K+ followers</h5><p class="muted mb-0">Sharing the best of Sri Lanka every day on Instagram.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM ===== -->
+  <section class="pt-0">
+    <div class="container">
+      <div class="text-center mb-4 reveal">
+        <div class="eyebrow">@visit.srilanka.__</div>
+        <h2 class="title mt-2">Follow the <em>journey</em></h2>
+      </div>
+      <div class="ig-grid reveal">
+        <div><i class="bi bi-image"></i></div><div><i class="bi bi-image"></i></div><div><i class="bi bi-image"></i></div>
+        <div><i class="bi bi-image"></i></div><div><i class="bi bi-image"></i></div><div><i class="bi bi-image"></i></div>
+      </div>
+      <div class="text-center mt-4 reveal"><a href="https://www.instagram.com/visit.srilanka.__/" target="_blank" class="btn btn-ocean"><i class="bi bi-instagram me-2"></i>Follow on Instagram</a></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" style="background: var(--sand);">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 reveal">
+          <div class="eyebrow">Good to know</div>
+          <h2 class="title mt-2">Questions?</h2>
+          <p class="muted">Sample answers: to be updated with the company's real details.</p>
+        </div>
+        <div class="col-lg-8 reveal">
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">Can you customise the whole trip?</button></h2><div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body muted">Yes. Tell us your dates, budget and interests, and we'll design a route just for you.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Do you offer airport pickup?</button></h2><div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">Yes, we provide airport transfers at any time, day or night.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">Can you book hotels for us?</button></h2><div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">We can arrange hotels, villas and experiences to match your style and budget.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">How do I get a price?</button></h2><div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">Use the trip planner above or message us on WhatsApp for a free, no-obligation quote.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="row g-0">
+          <div class="col-lg-5 p-5">
+            <div class="eyebrow" style="color:#ffd59e">Get in touch</div>
+            <h2 class="title mt-2 mb-4" style="color:#fff">Let's plan your <span class="script" style="color:#ffd59e">adventure</span></h2>
+            <div class="c-row"><i class="bi bi-whatsapp"></i><a href="https://wa.me/94769454241" target="_blank">+94 76 945 4241</a></div>
+            <div class="c-row"><i class="bi bi-geo-alt-fill"></i><div>350 3/A, Makola South,<br>Colombo, Sri Lanka</div></div>
+            <div class="c-row"><i class="bi bi-clock-fill"></i><div>Open 24 hours, 7 days</div></div>
+            <div class="c-row"><i class="bi bi-instagram"></i><a href="https://www.instagram.com/visit.srilanka.__/" target="_blank">@visit.srilanka.__</a></div>
+            <a href="https://wa.me/94769454241?text=Hi%20Visit%20Sri%20Lanka%20Tours!%20I'd%20like%20to%20plan%20a%20trip." target="_blank" class="btn btn-sun mt-3"><i class="bi bi-whatsapp me-2"></i>Chat on WhatsApp</a>
+          </div>
+          <div class="col-lg-7">
+            <iframe src="https://maps.google.com/maps?q=Makola%20South%2C%20Sri%20Lanka&z=14&output=embed" loading="lazy" title="Map – Makola South"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="d-flex align-items-center gap-2"><img src="logo.png" alt="" style="width:34px;height:34px;border-radius:50%"> <b style="color:var(--ink)">Visit Sri Lanka Tours</b></span>
+      <span>&copy; <span id="yr"></span> Visit Sri Lanka Tours · Your Journey. Your Way.</span>
+      <span>Website by Lowamina Pigera</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/94769454241" target="_blank" class="wa-fab"><i class="bi bi-whatsapp me-2"></i>Plan with us</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const WHATSAPP = '94769454241';
+
+    // ---- Trip planner ----
+    // Stops in a sensible travel order around the island. "tags" decide which interests include them.
+    const STOPS = [
+      { place: 'Sigiriya & Dambulla', note: 'Climb Lion Rock, visit the cave temples', tags: ['culture'], nights: 2 },
+      { place: 'Minneriya',           note: 'Elephant safari',                         tags: ['wildlife'], nights: 1 },
+      { place: 'Kandy',               note: 'Temple of the Tooth, local food & culture', tags: ['culture', 'food'], nights: 2 },
+      { place: 'Nuwara Eliya',        note: 'Tea plantations & cool climate',          tags: ['hills'], nights: 1 },
+      { place: 'Ella',                note: 'Scenic train ride, Nine Arch Bridge',     tags: ['hills'], nights: 2 },
+      { place: 'Yala',                note: 'Leopard & elephant jeep safari',          tags: ['wildlife'], nights: 1 },
+      { place: 'Mirissa',             note: 'Whale watching & beach time',             tags: ['beach', 'wildlife'], nights: 2 },
+      { place: 'Galle Fort',          note: 'Colonial streets & seafood',              tags: ['culture', 'beach', 'food'], nights: 1 },
+      { place: 'Bentota',             note: 'Relax by the beach, river safari',        tags: ['beach'], nights: 2 },
+      { place: 'Colombo',             note: 'Street food tour & city sights',          tags: ['food', 'culture'], nights: 1 }
+    ];
+
+    const daysEl = document.getElementById('days');
+    function chosen() { return [...document.querySelectorAll('.interest.on')].map(e => e.dataset.i); }
+
+    function buildPlan() {
+      const days = +daysEl.value;
+      document.getElementById('dayVal').textContent = days;
+      const ints = chosen();
+      const box = document.getElementById('itinerary');
+      if (!ints.length) {
+        box.innerHTML = '<div class="empty"><i class="bi bi-compass"></i>Pick at least one interest to see a sample route.</div>';
+        return [];
+      }
+      // Day 1 = arrival. Last day = departure. Fill the middle with matching stops.
+      let left = days - 2;
+      const plan = [{ d: 'Day 1', place: 'Arrival', note: 'Airport pickup by your chauffeur, transfer to hotel' }];
+      let day = 2;
+      for (const s of STOPS) {
+        if (left <= 0) break;
+        if (!s.tags.some(t => ints.includes(t))) continue;
+        const n = Math.min(s.nights, left);
+        const label = n > 1 ? `Day ${day}–${day + n - 1}` : `Day ${day}`;
+        plan.push({ d: label, place: s.place, note: s.note });
+        day += n; left -= n;
+      }
+      if (left > 0) plan.push({ d: left > 1 ? `Day ${day}–${day + left - 1}` : `Day ${day}`, place: 'Free days', note: 'Extra time to relax or add more places' }), day += left;
+      plan.push({ d: `Day ${days}`, place: 'Departure', note: 'Transfer to the airport' });
+
+      box.innerHTML = `<h4 class="mb-1">Your sample ${days}-day route</h4>
+        <p class="muted small mb-3">A starting point. We'll fine-tune everything for you.</p>` +
+        plan.map(p => `<div class="day"><b class="num">${p.d}</b><div><b>${p.place}</b><br><span class="muted small">${p.note}</span></div></div>`).join('');
+      return plan;
+    }
+
+    document.querySelectorAll('.interest').forEach(el => el.addEventListener('click', () => { el.classList.toggle('on'); buildPlan(); }));
+    daysEl.addEventListener('input', buildPlan);
+    buildPlan();
+
+    function sendTrip() {
+      const name = document.getElementById('tname').value.trim();
+      const msgEl = document.getElementById('tripMsg');
+      if (!name) { msgEl.textContent = 'Please enter your name.'; return; }
+      const plan = buildPlan();
+      if (!plan.length) { msgEl.textContent = 'Please pick at least one interest.'; return; }
+      const arrive = document.getElementById('arrive').value || 'flexible';
+      const people = document.getElementById('people').value;
+      const ints = chosen().join(', ');
+      const route = plan.map(p => `${p.d}: ${p.place}`).join('\n');
+      const text = `Hi Visit Sri Lanka Tours! I'd like a quote.\nName: ${name}\nArrival: ${arrive}\nDays: ${daysEl.value}\nTravellers: ${people}\nInterests: ${ints}\n\nSample route:\n${route}`;
+      window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
