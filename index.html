@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visit Sri Lanka Tours (preview) | Private Tours, Safaris &amp; Airport Transfers – Concept Demo</title>
+  <meta name="description" content="Visit Sri Lanka Tours – customised private tours, hotels, transport, airport transfers and safaris across Sri Lanka. Your Journey. Your Way.">
+  <!-- Demo only: stops Google from listing this page. REMOVE when the real site goes live. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <link href="mini-bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ocean: #0b6e74;
+      --ocean-deep: #08464b;
+      --lagoon: #19b4b0;
+      --sand: #f6ead7;
+      --sand-2: #fbf6ee;
+      --sunset: #f06a3c;
+      --sunset-dark: #d4552b;
+      --ink: #12302f;
+      --muted: #5e7473;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; color: var(--ink); background: var(--sand-2); }
+    h1, h2, h3, h4, .serif { font-family: 'DM Serif Display', serif; font-weight: 400; }
+    .script { font-family: 'Kaushan Script', cursive; }
+    section { padding: 100px 0; }
+    .muted { color: var(--muted); }
+    .eyebrow { color: var(--sunset); font-weight: 700; letter-spacing: 3px; font-size: .78rem; text-transform: uppercase; }
+    .title { font-size: clamp(2.3rem, 5vw, 3.6rem); line-height: 1.05; }
+    .title em { color: var(--ocean); }
+
+    .demo-ribbon { background: var(--ink); color: #dff3f2; text-align: center; font-size: .78rem; padding: 6px; }
+
+    /* Nav */
+    .navbar { background: rgba(251,246,238,.92); backdrop-filter: blur(8px); box-shadow: 0 2px 18px rgba(0,0,0,.05); }
+    .navbar-brand { display: flex; align-items: center; gap: 10px; font-family: 'DM Serif Display'; font-size: 1.3rem; color: var(--ink) !important; }
+    .navbar-brand img { width: 46px; height: 46px; border-radius: 50%; }
+    .navbar .nav-link { color: var(--ink) !important; font-weight: 500; }
+    .navbar .nav-link:hover { color: var(--ocean) !important; }
+
+    .btn-sun { background: var(--sunset); color: #fff; border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-sun:hover { background: var(--sunset-dark); color: #fff; }
+    .btn-ocean { background: var(--ocean); color: #fff; border: 0; border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-ocean:hover { background: var(--ocean-deep); color: #fff; }
+    .btn-white { background: #fff; color: var(--ink); border-radius: 50px; padding: 13px 28px; font-weight: 700; }
+    .btn-white:hover { background: var(--sand); }
+
+    /* Hero */
+    .hero { min-height: 92vh; display: flex; align-items: center; color: #fff; position: relative; overflow: hidden; padding: 48px 0 130px;
+      background:
+        radial-gradient(ellipse at 15% 110%, rgba(246,234,215,.95) 0 18%, transparent 19%),
+        radial-gradient(circle at 85% 15%, rgba(255,200,120,.55), transparent 30%),
+        linear-gradient(160deg, #0f8f92 0%, #0b6e74 45%, #08464b 100%); }
+    .hero .wave { position: absolute; left: 0; right: 0; bottom: -2px; width: 100%; }
+    .hero h1 { font-size: clamp(3rem, 8vw, 6rem); line-height: 1; }
+    .hero .script { font-size: clamp(2.4rem, 6vw, 4.2rem); color: #ffd59e; display: block; margin-bottom: -6px; }
+    .hero .lead { color: #d9f1ef; }
+    .hero-logo { width: clamp(220px, 30vw, 360px); border-radius: 50%; border: 8px solid rgba(255,255,255,.25); box-shadow: 0 30px 60px rgba(0,0,0,.3); }
+    .hero-badges span { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 50px; padding: 8px 16px; margin: 0 8px 8px 0; font-size: .9rem; }
+    .ig-proof { display: inline-flex; align-items: center; gap: 12px; background: #fff; color: var(--ink); border-radius: 50px; padding: 8px 18px 8px 8px; }
+    .ig-proof .ig { width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7); color: #fff; display: flex; align-items: center; justify-content: center; }
+
+    /* Services */
+    .svc { background: #fff; border-radius: 22px; padding: 30px; height: 100%; box-shadow: 0 10px 30px rgba(11,110,116,.06); transition: .3s; }
+    .svc:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(11,110,116,.14); }
+    .svc .ico { width: 58px; height: 58px; border-radius: 16px; background: #e1f4f3; color: var(--ocean); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 16px; }
+
+    /* Destinations */
+    .dest { position: relative; border-radius: 24px; overflow: hidden; min-height: 380px; display: flex; align-items: flex-end; padding: 24px; color: #fff; transition: .3s; }
+    .dest:hover { transform: scale(.985); }
+    .dest::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,.55), transparent 60%); }
+    .dest > * { position: relative; z-index: 1; }
+    .dest .bigi { position: absolute; top: 22px; right: 22px; font-size: 2.6rem; opacity: .5; z-index: 1; }
+    .dest h4 { margin: 0; font-size: 1.8rem; }
+    .d1 { background: linear-gradient(160deg, #c98a4b, #6d4a2a); } .d2 { background: linear-gradient(160deg, #e3b04b, #9a5b1e); }
+    .d3 { background: linear-gradient(160deg, #4f9a5a, #1f5530); } .d4 { background: linear-gradient(160deg, #8aa05a, #45562a); }
+    .d5 { background: linear-gradient(160deg, #19b4b0, #0b6e74); } .d6 { background: linear-gradient(160deg, #6ab0d6, #2e6b8f); }
+
+    /* Planner */
+    .planner { background: var(--ocean-deep); color: #fff; }
+    .planner .muted { color: #a9cfcd; }
+    .planner .title em { color: #ffd59e; }
+    .plan-card { background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12); border-radius: 24px; padding: 34px; }
+    .plan-card label.lbl { font-size: .8rem; letter-spacing: 2px; text-transform: uppercase; color: #a9cfcd; margin-bottom: 8px; display: block; }
+    .interest { display: inline-block; cursor: pointer; border: 1px solid rgba(255,255,255,.25); border-radius: 50px; padding: 9px 18px; margin: 0 8px 10px 0; user-select: none; transition: .2s; }
+    .interest.on { background: #ffd59e; color: var(--ink); border-color: #ffd59e; font-weight: 700; }
+    .plan-card .form-control, .plan-card .form-select { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); color: #fff; border-radius: 12px; padding: 12px; }
+    .plan-card .form-select option { color: #000; }
+    .plan-card .form-control:focus, .plan-card .form-select:focus { box-shadow: none; border-color: #ffd59e; background: rgba(255,255,255,.12); color: #fff; }
+    input[type=range] { accent-color: #ffd59e; }
+    .daycount { font-family: 'DM Serif Display'; font-size: 2.4rem; color: #ffd59e; line-height: 1; }
+    .itin { background: #fff; color: var(--ink); border-radius: 24px; padding: 30px; min-height: 100%; }
+    .itin .day { display: flex; gap: 16px; padding: 12px 0; border-bottom: 1px dashed #d9e7e6; }
+    .itin .day b.num { flex-shrink: 0; width: 64px; color: var(--sunset); font-family: 'DM Serif Display'; font-size: 1.1rem; font-weight: 400; }
+    .itin .empty { color: var(--muted); text-align: center; padding: 60px 10px; }
+    .itin .empty i { font-size: 3rem; color: #cfe3e2; display: block; margin-bottom: 10px; }
+
+    /* Why */
+    .why-item { display: flex; gap: 16px; margin-bottom: 26px; }
+    .why-item i { font-size: 1.6rem; color: var(--sunset); }
+    .why-photo { border-radius: 30px; min-height: 420px; background: linear-gradient(160deg, #19b4b0, #0b6e74 60%, #08464b); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.8); flex-direction: column; }
+    .why-photo i { font-size: 4rem; }
+
+    /* Instagram strip */
+    .ig-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+    .ig-grid div { aspect-ratio: 1/1; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.6rem; }
+    .ig-grid div:nth-child(1){background:#c98a4b}.ig-grid div:nth-child(2){background:#19b4b0}.ig-grid div:nth-child(3){background:#4f9a5a}
+    .ig-grid div:nth-child(4){background:#e3b04b}.ig-grid div:nth-child(5){background:#2e6b8f}.ig-grid div:nth-child(6){background:#8aa05a}
+    @media (max-width: 767px) { .ig-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* FAQ */
+    .accordion-item { border: 0; border-radius: 16px !important; margin-bottom: 12px; overflow: hidden; }
+    .accordion-button { font-weight: 700; }
+    .accordion-button:not(.collapsed) { background: #e1f4f3; color: var(--ocean); box-shadow: none; }
+    .accordion-button:focus { box-shadow: none; }
+
+    /* Contact */
+    .contact-wrap { background: var(--ocean); color: #fff; border-radius: 30px; overflow: hidden; }
+    .contact-wrap a { color: #fff; text-decoration: none; }
+    .c-row { display: flex; gap: 14px; margin-bottom: 18px; }
+    .c-row i { color: #ffd59e; font-size: 1.3rem; }
+    .contact-wrap iframe { width: 100%; height: 100%; min-height: 380px; border: 0; }
+
+    footer { padding: 34px 0; color: var(--muted); font-size: .9rem; }
+
+    .wa-fab { position: fixed; right: 22px; bottom: 22px; background: #25d366; color: #fff; border-radius: 50px; padding: 14px 20px; font-weight: 700; text-decoration: none; z-index: 999; box-shadow: 0 10px 26px rgba(0,0,0,.25); }
+    .wa-fab:hover { color: #fff; transform: translateY(-2px); }
+
+    /* photo slots: when a photo loads, hide the placeholder icon/label */
+    .has-img > i, .has-img > p { display: none; }
+    .reveal { opacity: 0; transform: translateY(24px); transition: .7s ease; }
+    .reveal.show { opacity: 1; transform: none; }
+  </style>
+</head>
+<body>
+
+  <!-- DEMO NOTICE: remove after the owner approves -->
+  <div class="demo-ribbon">Concept demo prepared for Visit Sri Lanka Tours · client review preview</div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home"><img src="logo.png" alt="Visit Sri Lanka Tours logo"> Visit Sri Lanka Tours</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+          <li class="nav-item"><a class="nav-link" href="#planner">Plan a Trip</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-2"><a class="btn btn-sun btn-sm px-4" href="#planner">Get a Free Quote</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home" data-img="hero.jpg" data-overlay="linear-gradient(160deg, rgba(11,110,116,.82), rgba(8,70,75,.9)), ">
+    <div class="container position-relative" style="z-index:2">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7 reveal">
+          <span class="script">Ayubowan!</span>
+          <h1>Discover Sri Lanka<br>your way.</h1>
+          <p class="lead my-4" style="max-width:540px">Customised private tours with professional chauffeurs, handpicked hotels, safaris and airport transfers, all planned around your dates and interests.</p>
+          <div class="hero-badges mb-4">
+            <span><i class="bi bi-car-front"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0M6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2zM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17s2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276"></path><path d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679q.05.242.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.8.8 0 0 0 .381-.404l.792-1.848ZM4.82 3a1.5 1.5 0 0 0-1.379.91l-.792 1.847a1.8 1.8 0 0 1-.853.904.8.8 0 0 0-.43.564L1.03 8.904a1.5 1.5 0 0 0-.03.294v.413c0 .796.62 1.448 1.408 1.484 1.555.07 3.786.155 5.592.155s4.037-.084 5.592-.155A1.48 1.48 0 0 0 15 9.611v-.413q0-.148-.03-.294l-.335-1.68a.8.8 0 0 0-.43-.563 1.8 1.8 0 0 1-.853-.904l-.792-1.848A1.5 1.5 0 0 0 11.18 3z"></path></svg></i>Private tours</span>
+            <span><i class="bi bi-airplane"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.428 1.151C6.708.591 7.213 0 8 0s1.292.592 1.572 1.151C9.861 1.73 10 2.431 10 3v3.691l5.17 2.585a1.5 1.5 0 0 1 .83 1.342V12a.5.5 0 0 1-.582.493l-5.507-.918-.375 2.253 1.318 1.318A.5.5 0 0 1 10.5 16h-5a.5.5 0 0 1-.354-.854l1.319-1.318-.376-2.253-5.507.918A.5.5 0 0 1 0 12v-1.382a1.5 1.5 0 0 1 .83-1.342L6 6.691V3c0-.568.14-1.271.428-1.849m.894.448C7.111 2.02 7 2.569 7 3v4a.5.5 0 0 1-.276.447l-5.448 2.724a.5.5 0 0 0-.276.447v.792l5.418-.903a.5.5 0 0 1 .575.41l.5 3a.5.5 0 0 1-.14.437L6.708 15h2.586l-.647-.646a.5.5 0 0 1-.14-.436l.5-3a.5.5 0 0 1 .576-.411L15 11.41v-.792a.5.5 0 0 0-.276-.447L9.276 7.447A.5.5 0 0 1 9 7V3c0-.432-.11-.979-.322-1.401C8.458 1.159 8.213 1 8 1s-.458.158-.678.599"></path></svg></i>Airport transfers</span>
+            <span><i class="bi bi-clock"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"></path></svg></i>Open 24 hours</span>
+          </div>
+          <div class="d-flex flex-wrap gap-3 mb-4">
+            <a href="#planner" class="btn btn-sun">Plan My Trip</a>
+            <a href="https://wa.me/94769454241?text=Hi%20Visit%20Sri%20Lanka%20Tours!%20I'd%20like%20to%20plan%20a%20trip." target="_blank" class="btn btn-white"><i class="bi bi-whatsapp me-2 text-success"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path></svg></i>WhatsApp Us</a>
+          </div>
+          <div class="ig-proof">
+            <div class="ig"><i class="bi bi-instagram"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg></i></div>
+            <div><b>120K+</b> travellers follow us on Instagram</div>
+          </div>
+        </div>
+        <div class="col-lg-5 text-center reveal">
+          <img src="logo.png" alt="Visit Sri Lanka" class="hero-logo">
+          <p class="script mt-4 mb-0" style="font-size:1.8rem;color:#ffd59e">Your Journey. Your Way.</p>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" height="90"><path fill="#fbf6ee" d="M0,64 C240,120 480,0 720,48 C960,96 1200,24 1440,64 L1440,120 L0,120 Z"/></svg>
+  </header>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <div class="eyebrow">What we offer</div>
+        <h2 class="title mt-2">Everything for your <em>perfect trip</em></h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-map"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"></path></svg></i></div><h4>Customised Private Tours</h4><p class="muted mb-0">Your own vehicle and itinerary, built around what you love.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-building"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"></path><path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z"></path></svg></i></div><h4>Hotels &amp; Villas</h4><p class="muted mb-0">Handpicked stays from boutique villas to beach resorts.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-airplane-engines"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0c-.787 0-1.292.592-1.572 1.151A4.35 4.35 0 0 0 6 3v3.691l-2 1V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.191l-1.17.585A1.5 1.5 0 0 0 0 10.618V12a.5.5 0 0 0 .582.493l1.631-.272.313.937a.5.5 0 0 0 .948 0l.405-1.214 2.21-.369.375 2.253-1.318 1.318A.5.5 0 0 0 5.5 16h5a.5.5 0 0 0 .354-.854l-1.318-1.318.375-2.253 2.21.369.405 1.214a.5.5 0 0 0 .948 0l.313-.937 1.63.272A.5.5 0 0 0 16 12v-1.382a1.5 1.5 0 0 0-.83-1.342L14 8.691V7.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v.191l-2-1V3c0-.568-.14-1.271-.428-1.849C9.292.591 8.787 0 8 0M7 3c0-.432.11-.979.322-1.401C7.542 1.159 7.787 1 8 1s.458.158.678.599C8.889 2.02 9 2.569 9 3v4a.5.5 0 0 0 .276.447l5.448 2.724a.5.5 0 0 1 .276.447v.792l-5.418-.903a.5.5 0 0 0-.575.41l-.5 3a.5.5 0 0 0 .14.437l.646.646H6.707l.647-.646a.5.5 0 0 0 .14-.436l-.5-3a.5.5 0 0 0-.576-.411L1 11.41v-.792a.5.5 0 0 1 .276-.447l5.448-2.724A.5.5 0 0 0 7 7z"></path></svg></i></div><h4>Airport Transfers</h4><p class="muted mb-0">Comfortable pickup and drop-off at any hour, day or night.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-binoculars"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"></path></svg></i></div><h4>Safaris &amp; Adventures</h4><p class="muted mb-0">Leopards, elephants, whales, hikes and more.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-person-badge"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path><path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"></path></svg></i></div><h4>Professional Chauffeurs</h4><p class="muted mb-0">Friendly, experienced drivers who know the island inside out.</p></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="svc"><div class="ico"><i class="bi bi-geo-alt"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"></path><path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path></svg></i></div><h4>Islandwide Assistance</h4><p class="muted mb-0">Support wherever you are in Sri Lanka, 24 hours a day.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DESTINATIONS ===== -->
+  <section id="destinations" class="pt-0">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-end flex-wrap gap-3 mb-5 reveal">
+        <div><div class="eyebrow">Where to go</div><h2 class="title mt-2">Popular <em>destinations</em></h2></div>
+        <a href="#planner" class="btn btn-ocean">Build a trip with these</a>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d1" data-img="sigiriya.jpg" data-pos="center 30%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>Ancient rock fortress</small><h4>Sigiriya</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d3" data-img="ella.jpg" data-pos="center 60%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>Hill country &amp; Nine Arch Bridge</small><h4>Ella</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d6" data-img="galle.jpg" data-pos="center 35%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>Colonial fort &amp; lighthouse</small><h4>Galle</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d5" data-img="trincomalee.jpg" data-pos="center 60%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>East coast beaches</small><h4>Trincomalee</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d2" data-img="mirissa.jpg" data-pos="center 45%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>Beach life &amp; sunsets</small><h4>Mirissa</h4></div></div></div>
+        <div class="col-md-6 col-lg-4 reveal"><div class="dest d4" data-img="udawalawe.jpg" data-pos="center 40%"><i class="bi bi-image bigi"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i><div><small>Elephant safari</small><h4>Udawalawe</h4></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRIP PLANNER ===== -->
+  <section class="planner" id="planner">
+    <div class="container">
+      <div class="mb-5 reveal">
+        <div class="eyebrow" style="color:#ffd59e">Free trip planner</div>
+        <h2 class="title mt-2">Tell us your dates &amp; interests, <em>we'll do the rest</em></h2>
+        <p class="muted">Pick your interests and trip length to see a sample route, then send it to us for a free personalised quote.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-6 reveal">
+          <div class="plan-card">
+            <label class="lbl">I'm interested in</label>
+            <div id="interests" class="mb-4">
+              <span class="interest on" data-i="culture">🛕 Culture</span>
+              <span class="interest on" data-i="wildlife">🐘 Wildlife</span>
+              <span class="interest" data-i="hills">🌿 Hill Country</span>
+              <span class="interest on" data-i="beach">🏖️ Beaches</span>
+              <span class="interest" data-i="food">🍛 Food</span>
+            </div>
+            <label class="lbl">Trip length</label>
+            <div class="d-flex align-items-center gap-3 mb-4">
+              <input type="range" id="days" min="3" max="14" value="7" class="form-range flex-grow-1">
+              <div class="daycount"><span id="dayVal">7</span><small style="font-size:1rem"> days</small></div>
+            </div>
+            <div class="row g-3">
+              <div class="col-sm-6"><label class="lbl">Arrival date</label><input type="date" id="arrive" class="form-control"></div>
+              <div class="col-sm-6"><label class="lbl">Travellers</label>
+                <select id="people" class="form-select"><option>1</option><option selected>2</option><option>3–4</option><option>5–8</option><option>9+</option></select>
+              </div>
+              <div class="col-12"><label class="lbl">Your name</label><input id="tname" class="form-control" placeholder="Name"></div>
+            </div>
+            <button class="btn btn-sun w-100 mt-4" onclick="sendTrip()"><i class="bi bi-whatsapp me-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path></svg></i>Send for a Free Quote</button>
+            <small id="tripMsg" class="d-block mt-2" style="color:#ffd59e"></small>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="itin" id="itinerary"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY US ===== -->
+  <section>
+    <div class="container">
+      <div class="row g-5 align-items-center">
+        <div class="col-lg-6 reveal"><div class="why-photo" data-img="team.jpg" data-pos="center 45%"><i class="bi bi-camera"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4z"></path><path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7M3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"></path></svg></i><p class="mt-3 mb-0">Our guide welcoming guests at the airport</p></div></div>
+        <div class="col-lg-6 reveal">
+          <div class="eyebrow">Why travel with us</div>
+          <h2 class="title mt-2 mb-4">Local experts, <em>personal service</em></h2>
+          <div class="why-item"><i class="bi bi-heart"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"></path></svg></i><div><h5 class="mb-1">Made for you</h5><p class="muted mb-0">No fixed packages. Every trip is planned around your dates and interests.</p></div></div>
+          <div class="why-item"><i class="bi bi-shield-check"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"></path><path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"></path></svg></i><div><h5 class="mb-1">Safe &amp; reliable</h5><p class="muted mb-0">Professional chauffeurs and comfortable, well-maintained vehicles.</p></div></div>
+          <div class="why-item"><i class="bi bi-clock-history"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"></path><path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"></path><path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"></path></svg></i><div><h5 class="mb-1">24-hour support</h5><p class="muted mb-0">We're always one WhatsApp message away during your trip.</p></div></div>
+          <div class="why-item"><i class="bi bi-instagram"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg></i><div><h5 class="mb-1">Trusted by 120K+ followers</h5><p class="muted mb-0">Sharing the best of Sri Lanka every day on Instagram.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== INSTAGRAM ===== -->
+  <section class="pt-0">
+    <div class="container">
+      <div class="text-center mb-4 reveal">
+        <div class="eyebrow">@visit.srilanka.__</div>
+        <h2 class="title mt-2">Follow the <em>journey</em></h2>
+      </div>
+      <div class="ig-grid reveal">
+        <div data-img="gallery1.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery2.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery3.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery4.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery5.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery6.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery7.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery8.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery9.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery10.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery11.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+        <div data-img="gallery12.jpg"><i class="bi bi-image"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"></path><path d="M2.002 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v6.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12V3a1 1 0 0 1 1-1z"></path></svg></i></div>
+      </div>
+      <div class="text-center mt-4 reveal"><a href="https://www.instagram.com/visit.srilanka.__/" target="_blank" class="btn btn-ocean"><i class="bi bi-instagram me-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg></i>Follow on Instagram</a></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" style="background: var(--sand);">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 reveal">
+          <div class="eyebrow">Good to know</div>
+          <h2 class="title mt-2">Questions?</h2>
+          <p class="muted">Sample answers: to be updated with the company's real details.</p>
+        </div>
+        <div class="col-lg-8 reveal">
+          <div class="accordion" id="faqAcc">
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">Can you customise the whole trip?</button></h2><div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAcc"><div class="accordion-body muted">Yes. Tell us your dates, budget and interests, and we'll design a route just for you.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Do you offer airport pickup?</button></h2><div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">Yes, we provide airport transfers at any time, day or night.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">Can you book hotels for us?</button></h2><div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">We can arrange hotels, villas and experiences to match your style and budget.</div></div></div>
+            <div class="accordion-item"><h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">How do I get a price?</button></h2><div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body muted">Use the trip planner above or message us on WhatsApp for a free, no-obligation quote.</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="row g-0">
+          <div class="col-lg-5 p-5">
+            <div class="eyebrow" style="color:#ffd59e">Get in touch</div>
+            <h2 class="title mt-2 mb-4" style="color:#fff">Let's plan your <span class="script" style="color:#ffd59e">adventure</span></h2>
+            <div class="c-row"><i class="bi bi-whatsapp"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path></svg></i><a href="https://wa.me/94769454241" target="_blank">+94 76 945 4241</a></div>
+            <div class="c-row"><i class="bi bi-geo-alt-fill"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"></path></svg></i><div>350 3/A, Makola South,<br>Colombo, Sri Lanka</div></div>
+            <div class="c-row"><i class="bi bi-clock-fill"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"></path></svg></i><div>Open 24 hours, 7 days</div></div>
+            <div class="c-row"><i class="bi bi-instagram"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path></svg></i><a href="https://www.instagram.com/visit.srilanka.__/" target="_blank">@visit.srilanka.__</a></div>
+            <a href="https://wa.me/94769454241?text=Hi%20Visit%20Sri%20Lanka%20Tours!%20I'd%20like%20to%20plan%20a%20trip." target="_blank" class="btn btn-sun mt-3"><i class="bi bi-whatsapp me-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path></svg></i>Chat on WhatsApp</a>
+          </div>
+          <div class="col-lg-7">
+            <div style="height:100%;min-height:380px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#08464b;color:#d9f1ef;text-align:center;padding:24px"><div style="font-size:3rem">📍</div><div>The Google Map appears here on the real website.<br><small>(Maps cannot load inside this preview.)</small></div><a class="btn btn-white" href="https://www.google.com/maps/search/?api=1&query=Makola+South+Sri+Lanka" target="_blank" rel="noopener">Open in Google Maps</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+      <span class="d-flex align-items-center gap-2"><img src="logo.png" alt="" style="width:34px;height:34px;border-radius:50%"> <b style="color:var(--ink)">Visit Sri Lanka Tours</b></span>
+      <span>&copy; <span id="yr"></span> Visit Sri Lanka Tours · Your Journey. Your Way.</span>
+      <span>Website by Lowamina Pigera</span>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/94769454241" target="_blank" class="wa-fab"><i class="bi bi-whatsapp me-2"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"></path></svg></i>Plan with us</a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+    const WHATSAPP = '94769454241';
+
+    // ---- Trip planner ----
+    // Stops in a sensible travel order around the island. "tags" decide which interests include them.
+    const STOPS = [
+      { place: 'Sigiriya', note: 'Climb Lion Rock, visit the Dambulla cave temples', tags: ['culture'], nights: 2 },
+      { place: 'Trincomalee', note: 'East coast beaches, snorkelling & whale watching', tags: ['beach', 'wildlife'], nights: 2 },
+      { place: 'Kandy', note: 'Temple of the Tooth, local food & culture', tags: ['culture', 'food'], nights: 1 },
+      { place: 'Ella', note: 'Scenic train ride, Nine Arch Bridge & tea country', tags: ['hills'], nights: 2 },
+      { place: 'Udawalawe', note: 'Elephant jeep safari', tags: ['wildlife'], nights: 1 },
+      { place: 'Mirissa', note: 'Beach time, sunsets & whale watching', tags: ['beach', 'wildlife'], nights: 2 },
+      { place: 'Galle', note: 'Fort, lighthouse & seafood', tags: ['culture', 'beach', 'food'], nights: 1 },
+      { place: 'Colombo', note: 'Street food tour & city sights', tags: ['food', 'culture'], nights: 1 }
+    ];
+
+    const daysEl = document.getElementById('days');
+    function chosen() { return [...document.querySelectorAll('.interest.on')].map(e => e.dataset.i); }
+
+    function buildPlan() {
+      const days = +daysEl.value;
+      document.getElementById('dayVal').textContent = days;
+      const ints = chosen();
+      const box = document.getElementById('itinerary');
+      if (!ints.length) {
+        box.innerHTML = '<div class="empty"><i class="bi bi-compass"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M8 16.016a7.5 7.5 0 0 0 1.962-14.74A1 1 0 0 0 9 0H7a1 1 0 0 0-.962 1.276A7.5 7.5 0 0 0 8 16.016m6.5-7.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0"></path><path d="m6.94 7.44 4.95-2.83-2.83 4.95-4.949 2.83 2.828-4.95z"></path></svg></i>Pick at least one interest to see a sample route.</div>';
+        return [];
+      }
+      // Day 1 = arrival. Last day = departure. Fill the middle with matching stops.
+      let left = days - 2;
+      const plan = [{ d: 'Day 1', place: 'Arrival', note: 'Airport pickup by your chauffeur, transfer to hotel' }];
+      let day = 2;
+      for (const s of STOPS) {
+        if (left <= 0) break;
+        if (!s.tags.some(t => ints.includes(t))) continue;
+        const n = Math.min(s.nights, left);
+        const label = n > 1 ? `Day ${day}–${day + n - 1}` : `Day ${day}`;
+        plan.push({ d: label, place: s.place, note: s.note });
+        day += n; left -= n;
+      }
+      if (left > 0) plan.push({ d: left > 1 ? `Day ${day}–${day + left - 1}` : `Day ${day}`, place: 'Free days', note: 'Extra time to relax or add more places' }), day += left;
+      plan.push({ d: `Day ${days}`, place: 'Departure', note: 'Transfer to the airport' });
+
+      box.innerHTML = `<h4 class="mb-1">Your sample ${days}-day route</h4>
+        <p class="muted small mb-3">A starting point. We'll fine-tune everything for you.</p>` +
+        plan.map(p => `<div class="day"><b class="num">${p.d}</b><div><b>${p.place}</b><br><span class="muted small">${p.note}</span></div></div>`).join('');
+      return plan;
+    }
+
+    document.querySelectorAll('.interest').forEach(el => el.addEventListener('click', () => { el.classList.toggle('on'); buildPlan(); }));
+    daysEl.addEventListener('input', buildPlan);
+    buildPlan();
+
+    function sendTrip() {
+      const name = document.getElementById('tname').value.trim();
+      const msgEl = document.getElementById('tripMsg');
+      if (!name) { msgEl.textContent = 'Please enter your name.'; return; }
+      const plan = buildPlan();
+      if (!plan.length) { msgEl.textContent = 'Please pick at least one interest.'; return; }
+      const arrive = document.getElementById('arrive').value || 'flexible';
+      const people = document.getElementById('people').value;
+      const ints = chosen().join(', ');
+      const route = plan.map(p => `${p.d}: ${p.place}`).join('\n');
+      const text = `Hi Visit Sri Lanka Tours! I'd like a quote.\nName: ${name}\nArrival: ${arrive}\nDays: ${daysEl.value}\nTravellers: ${people}\nInterests: ${ints}\n\nSample route:\n${route}`;
+      const waUrl = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(text)}`;
+      msgEl.innerHTML = `<a href="${waUrl}" target="_blank" rel="noopener" style="color:#ffd59e;font-weight:700">Tap here to open WhatsApp with your request</a>`;
+    }
+
+    // ---- Photo slots ----
+    // Put photos in the "img" folder using the file names in img/PHOTOS.txt.
+    // If a photo is there it is shown; if not, the coloured placeholder stays.
+    document.querySelectorAll('[data-img]').forEach(el => {
+      const src = 'img/' + el.dataset.img;
+      const test = new Image();
+      test.onload = () => {
+        el.style.backgroundImage = (el.dataset.overlay || '') + `url("${src}")`;
+        el.style.backgroundSize = 'cover';
+        el.style.backgroundPosition = el.dataset.pos || 'center';
+        el.classList.add('has-img');
+      };
+      test.src = src;
+    });
+
+    // Reveal on scroll
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); }
+    }), { threshold: .1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
